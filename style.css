@@ -1,0 +1,356 @@
+/* ===== Google Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Tajawal:wght@300;400;700&display=swap');
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  direction: rtl;
+}
+
+/* ===== Backgrounds ===== */
+.bg-gradient {
+  background: #f5efe6;
+}
+
+.bg-dark {
+  background: #1c1c1e;
+}
+
+/* ===== Floating hearts - minimal ===== */
+.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  bottom: -50px;
+  font-size: 1rem;
+  animation: floatUp linear infinite;
+  opacity: 0.25;
+}
+
+@keyframes floatUp {
+  0%   { transform: translateY(0); opacity: 0.25; }
+  100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+/* ===== Page container ===== */
+.page-container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ===== Cards ===== */
+.glass-card {
+  background: #ffffff;
+  border: 1px solid #e8ddd4;
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  max-width: 680px;
+  width: 100%;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.glass-card-dark {
+  background: #2c2c2e;
+  border: 1px solid #3a3a3c;
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  max-width: 720px;
+  width: 100%;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Typography ===== */
+.title-main {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  color: #b07d62;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #9e8070;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.title-white {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(2rem, 7vw, 4rem);
+  color: #e8d5c4;
+  margin-bottom: 1rem;
+}
+
+.text-white-soft {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.05rem;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Buttons ===== */
+.btn-main {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  background: #b07d62;
+  color: #fff;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(176, 125, 98, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.btn-main:hover {
+  background: #9a6b52;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(176, 125, 98, 0.35);
+}
+
+.btn-surprise {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  background: #5c5470;
+  color: #fff;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(92, 84, 112, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.btn-surprise:hover {
+  background: #4a4360;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(92, 84, 112, 0.4);
+}
+
+/* ===== Love text block ===== */
+.love-text-block {
+  background: #252528;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.05rem;
+  line-height: 2.4;
+  animation: fadeInUp 0.5s ease both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== scroll container ===== */
+.scroll-container {
+  max-height: 65vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #3a3a3c transparent;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 4px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #3a3a3c;
+  border-radius: 10px;
+}
+
+/* ===== Big heart ===== */
+.big-heart {
+  font-size: clamp(4rem, 15vw, 8rem);
+  display: block;
+  margin: 1rem auto;
+  line-height: 1;
+}
+
+/* ===== I love you title ===== */
+.ily-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(2.2rem, 9vw, 5rem);
+  color: #e8d5c4;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Gallery title ===== */
+.gallery-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 2rem 0 1rem;
+}
+
+/* ===== Stars ===== */
+.stars {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.15;
+}
+
+/* ===== Card style photos ===== */
+.cards-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0;
+  width: 100%;
+  padding: 1.5rem 0 2rem;
+  position: relative;
+}
+
+.photo-card {
+  width: 160px;
+  height: 210px;
+  border-radius: 18px;
+  border: 2px solid #3a3a3c;
+  background: #252528;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex-shrink: 0;
+}
+
+.photo-card:nth-child(2) {
+  width: 180px;
+  height: 230px;
+  z-index: 2;
+  border-color: #5c5470;
+  box-shadow: 0 12px 36px rgba(92, 84, 112, 0.4);
+}
+
+.photo-card:nth-child(1) {
+  transform: rotate(-8deg) translateX(20px);
+  z-index: 1;
+}
+.photo-card:nth-child(1):hover {
+  transform: rotate(-4deg) translateX(10px) translateY(-8px);
+}
+
+.photo-card:nth-child(2):hover {
+  transform: translateY(-10px);
+}
+
+.photo-card:nth-child(3) {
+  transform: rotate(8deg) translateX(-20px);
+  z-index: 1;
+}
+.photo-card:nth-child(3):hover {
+  transform: rotate(4deg) translateX(-10px) translateY(-8px);
+}
+
+.photo-card input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.photo-card .card-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: rgba(255,255,255,0.2);
+  font-size: 2rem;
+  gap: 0.4rem;
+}
+
+.photo-card .card-placeholder span {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.15);
+}
+
+.photo-card img.preview {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* ===== Back button ===== */
+.back-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.6rem 1.8rem;
+  background: transparent;
+  color: rgba(255,255,255,0.4);
+  font-family: 'Tajawal', sans-serif;
+  font-size: 0.9rem;
+  border: 1px solid #3a3a3c;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.back-btn:hover {
+  color: rgba(255,255,255,0.7);
+  border-color: #5c5470;
+}
+
+/* ===== gallery note ===== */
+.gallery-note {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.25);
+  margin-top: 0.6rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .glass-card, .glass-card-dark {
+    padding: 2rem 1.2rem;
+    border-radius: 18px;
+  }
+  .photo-card { width: 110px; height: 145px; }
+  .photo-card:nth-child(2) { width: 130px; height: 165px; }
+}
